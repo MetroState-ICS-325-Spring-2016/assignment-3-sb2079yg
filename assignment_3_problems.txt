@@ -12,13 +12,167 @@ SELECT COUNT(*) FROM `customers` WHERE `creditLimit` > 20000;
 
 1. How many customers are located in Germany? (Should return only 1 field with the count.)
 
+SELECT COUNT(*) FROM `customers` WHERE `country` = 'Germany';
+13
+
+
 2. What is the contact first name and contact last name for every contact that has a first name that starts with D?
 
-3. What are the customer names for every company that Leslie Tompson is a sales rep for?
+SELECT `contactFirstName`, `contactLastName` from `customers` WHERE `contactFirstName` LIKE 'D%';
+
+
+Diego 	Freyre
+Dean	Cassidy
+Daniel	Da Silva
+Daniel 	Tonini
+Dorothy	Young
+Dominique	Perrier
+Dan	Lewis
+
+
+
+3. What are the customer names for every company that Leslie Thompson is a sales rep for?
+
+SELECT `employeeNumber`, `lastName`, `firstName`, `customerName` FROM classicmodels.employees, classicmodels.customers WHERE `employeeNumber` = 1166 ; 
+
+1166	Thompson	Leslie	Atelier graphique
+1166	Thompson	Leslie	Signal Gift Stores
+1166	Thompson	Leslie	Australian Collectors, Co.
+1166	Thompson	Leslie	La Rochelle Gifts
+1166	Thompson	Leslie	Baane Mini Imports
+1166	Thompson	Leslie	Mini Gifts Distributors Ltd.
+1166	Thompson	Leslie	Havel & Zbyszek Co
+1166	Thompson	Leslie	Blauer See Auto, Co.
+1166	Thompson	Leslie	Mini Wheels Co.
+1166	Thompson	Leslie	Land of Toys Inc.
+1166	Thompson	Leslie	Euro+ Shopping Channel
+1166	Thompson	Leslie	Volvo Model Replicas, Co
+1166	Thompson	Leslie	Danish Wholesale Imports
+1166	Thompson	Leslie	Saveley & Henriot, Co.
+1166	Thompson	Leslie	Dragon Souveniers, Ltd.
+1166	Thompson	Leslie	Muscle Machine Inc
+1166	Thompson	Leslie	Diecast Classics Inc.
+1166	Thompson	Leslie	Technics Stores Inc.
+1166	Thompson	Leslie	Handji Gifts& Co
+1166	Thompson	Leslie	Herkku Gifts
+1166	Thompson	Leslie	American Souvenirs Inc
+1166	Thompson	Leslie	Porto Imports Co.
+1166	Thompson	Leslie	Daedalus Designs Imports
+1166	Thompson	Leslie	La Corne D'abondance, Co.
+1166	Thompson	Leslie	Cambridge Collectables Co.
+1166	Thompson	Leslie	Gift Depot Inc.
+1166	Thompson	Leslie	Osaka Souveniers Co.
+1166	Thompson	Leslie	Vitachrome Inc.
+1166	Thompson	Leslie	Toys of Finland, Co.
+1166	Thompson	Leslie	AV Stores, Co.
+1166	Thompson	Leslie	Clover Collections, Co.
+1166	Thompson	Leslie	Auto-Moto Classics Inc.
+1166	Thompson	Leslie	UK Collectables, Ltd.
+1166	Thompson	Leslie	Canadian Gift Exchange Network
+1166	Thompson	Leslie	Online Mini Collectables
+1166	Thompson	Leslie	Toys4GrownUps.com
+1166	Thompson	Leslie	Asian Shopping Network, Co
+1166	Thompson	Leslie	Mini Caravy
+1166	Thompson	Leslie	King Kong Collectables, Co.
+1166	Thompson	Leslie	Enaco Distributors
+1166	Thompson	Leslie	Boards & Toys Co.
+1166	Thompson	Leslie	Natürlich Autos
+1166	Thompson	Leslie	Heintze Collectables
+1166	Thompson	Leslie	Québec Home Shopping Network
+1166	Thompson	Leslie	ANG Resellers
+1166	Thompson	Leslie	Collectable Mini Designs Co.
+1166	Thompson	Leslie	giftsbymail.co.uk
+1166	Thompson	Leslie	Alpha Cognac
+1166	Thompson	Leslie	Messner Shopping Network
+1166	Thompson	Leslie	Amica Models & Co.
+1166	Thompson	Leslie	Lyon Souveniers
+1166	Thompson	Leslie	Auto Associés & Cie.
+1166	Thompson	Leslie	Toms Spezialitäten, Ltd
+1166	Thompson	Leslie	Royal Canadian Collectables, Ltd.
+1166	Thompson	Leslie	Franken Gifts, Co
+1166	Thompson	Leslie	Anna's Decorations, Ltd
+1166	Thompson	Leslie	Rovelli Gifts
+1166	Thompson	Leslie	Souveniers And Things Co.
+1166	Thompson	Leslie	Marta's Replicas Co.
+1166	Thompson	Leslie	BG&E Collectables
+1166	Thompson	Leslie	Vida Sport, Ltd
+1166	Thompson	Leslie	Norway Gifts By Mail, Co.
+1166	Thompson	Leslie	Schuyler Imports
+1166	Thompson	Leslie	Der Hund Imports
+1166	Thompson	Leslie	Oulu Toy Supplies, Inc.
+1166	Thompson	Leslie	Petit Auto
+1166	Thompson	Leslie	Mini Classics
+1166	Thompson	Leslie	Mini Creations Ltd.
+1166	Thompson	Leslie	Corporate Gift Ideas Co.
+1166	Thompson	Leslie	Down Under Souveniers, Inc
+1166	Thompson	Leslie	Stylish Desk Decors, Co.
+1166	Thompson	Leslie	Tekni Collectables Inc.
+1166	Thompson	Leslie	Australian Gift Network, Co
+1166	Thompson	Leslie	Suominen Souveniers
+1166	Thompson	Leslie	Cramer Spezialitäten, Ltd
+1166	Thompson	Leslie	Classic Gift Ideas, Inc
+1166	Thompson	Leslie	CAF Imports
+1166	Thompson	Leslie	Men 'R' US Retailers, Ltd.
+1166	Thompson	Leslie	Asian Treasures, Inc.
+1166	Thompson	Leslie	Marseille Mini Autos
+1166	Thompson	Leslie	Reims Collectables
+1166	Thompson	Leslie	SAR Distributors, Co
+1166	Thompson	Leslie	GiftsForHim.com
+1166	Thompson	Leslie	Kommission Auto
+1166	Thompson	Leslie	Gifts4AllAges.com
+1166	Thompson	Leslie	Online Diecast Creations Co.
+1166	Thompson	Leslie	Lisboa Souveniers, Inc
+1166	Thompson	Leslie	Precious Collectables
+1166	Thompson	Leslie	Collectables For Less Inc.
+1166	Thompson	Leslie	Royale Belge
+1166	Thompson	Leslie	Salzburg Collectables
+1166	Thompson	Leslie	Cruz & Sons Co.
+1166	Thompson	Leslie	L'ordine Souveniers
+1166	Thompson	Leslie	Tokyo Collectables, Ltd
+1166	Thompson	Leslie	Auto Canal+ Petit
+1166	Thompson	Leslie	Stuttgart Collectable Exchange
+1166	Thompson	Leslie	Extreme Desk Decorations, Ltd
+1166	Thompson	Leslie	Bavarian Collectables Imports, Co.
+1166	Thompson	Leslie	Classic Legends Inc.
+1166	Thompson	Leslie	Feuer Online Stores, Inc
+1166	Thompson	Leslie	Gift Ideas Corp.
+1166	Thompson	Leslie	Scandinavian Gift Ideas
+1166	Thompson	Leslie	The Sharp Gifts Warehouse
+1166	Thompson	Leslie	Mini Auto Werke
+1166	Thompson	Leslie	Super Scale Inc.
+1166	Thompson	Leslie	Microscale Inc.
+1166	Thompson	Leslie	Corrida Auto Replicas, Ltd
+1166	Thompson	Leslie	Warburg Exchange
+1166	Thompson	Leslie	FunGiftIdeas.com
+1166	Thompson	Leslie	Anton Designs, Ltd.
+1166	Thompson	Leslie	Australian Collectables, Ltd
+1166	Thompson	Leslie	Frau da Collezione
+1166	Thompson	Leslie	West Coast Collectables Co.
+1166	Thompson	Leslie	Mit Vergnügen & Co.
+1166	Thompson	Leslie	Kremlin Collectables, Co.
+1166	Thompson	Leslie	Raanan Stores, Inc
+1166	Thompson	Leslie	Iberia Gift Imports, Corp.
+1166	Thompson	Leslie	Motor Mint Distributors Inc.
+1166	Thompson	Leslie	Signal Collectibles Ltd.
+1166	Thompson	Leslie	Double Decker Gift Stores, Ltd
+1166	Thompson	Leslie	Diecast Collectables
+1166	Thompson	Leslie	Kelly's Gift Shop
+
+
+
 
 4. What was the amount for the last payment that Boards & Toys Co. made? (Should return only 1 field with the amount.)
 
+SELECT MAX(`paymentDate`), `amount` FROM classicmodels.payments WHERE `customerNumber` = 219  ORDER BY `paymentDate` DESC;
+
+
+2005-03-02	3452.75
+
+
 5. How many payments have been made that are more than 20000? (Should return 1 field with the count.)
+
+SELECT COUNT(`amount`) FROM classicmodels.payments WHERE `amount` > 20000;
+195
 
 6. Write a PHP program that prints the following information to the terminal:
 The customer name, country, and sales rep name on one line per customer.

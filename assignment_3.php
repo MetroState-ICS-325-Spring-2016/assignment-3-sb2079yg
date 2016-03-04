@@ -48,7 +48,8 @@ if ($mysql_connection->connect_errno) {
 //
 // For your query, you will need to join the customers and employees
 // tables together.
-$query_result = $mysql_connection->query("SELECT your query here");
+$query_result = $mysql_connection->query("SELECT customers.customerName, customers.country, CONCAT(`firstName`,' ',
+`lastName`) AS `salesrep` FROM `employees`, `customers` ORDER BY `salesrep`,`country`, `customerName`;");
 
 // Make sure there wasn't an error with the query.
 if ($query_result !== false) {
@@ -56,7 +57,11 @@ if ($query_result !== false) {
     // http://php.net/manual/en/mysqli-result.fetch-assoc.php
     while($row_array = $query_result->fetch_assoc()) {
 	    // Your output goes here
+        echo $row_array["customerName"].", ".$row_array["country"]." - ".$row_array["salesrep"]."\n";
+
+
     }
+
 
     // We're done with the query result set, so free it.
     // This frees up the memory the result set object was using.
